@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function addLike() {
-  console.log("clicked")
+  console.log(event)
   p.textContent = parseInt(p.textContent) + 1;
   let likes = parseInt(p.textContent)
   console.log(event.target.dataset)
