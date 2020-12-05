@@ -106,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //update like coutn by click to patch request to server
 function updateLikeCount(event) {
+  console.log(event)
    fetch("http://localhost:3000/toys/`${event.target.id}`", {
     method: "PATCH",
     headers: {
