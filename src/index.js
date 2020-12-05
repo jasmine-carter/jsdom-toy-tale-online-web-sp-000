@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".like-btn").forEach(item => {
       item.addEventListener("click", event => {
         p.textContent = parseInt(p.textContent) + 1;
+        console.log(event.target.dataset)
         updateLikeCount(p.textContent, id);
       })
     })
