@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 function addLike() {
-  console.log(event.target.previousElementsSibling)
+  console.log(event)
   console.log(event.target.previousElementsSibling.innerText)
   p.textContent = parseInt(p.textContent) + 1;
   let likes = parseInt(p.textContent)
