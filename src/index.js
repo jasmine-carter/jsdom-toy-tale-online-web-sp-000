@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function addLike(id) {
   //figure out
+  console.log(event.target.previousElementsSibling)
   currentLikes = event.target.previousElementsSibling
   newLikeCount = parseInt(currentLikes) + 1;
   let likes = parseInt(newLikeCount)
