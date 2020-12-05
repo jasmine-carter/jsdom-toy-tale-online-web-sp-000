@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });//end of click button to add new toy event listener
 
+}); //end of domcontentloadedeventlistner
+
+
+
   const toyCollection = document.querySelector("#toy-collection")
 
   //create a functiont o create a toy info card
@@ -35,6 +39,15 @@ document.addEventListener("DOMContentLoaded", () => {
     card.appendChild(button)//add like button to card div
 
     toyCollection.appendChild(card)//adds new div to toycollection div
-  }
+  }//end of createToyCard function
 
-}); //end of domcontentloadedeventlistner
+  function retrieveToys() {//fetch toys
+    fetch("http://localhost:3000/toys")
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      console.log(json)
+    })
+    
+  }
