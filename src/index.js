@@ -90,4 +90,4 @@ function submitNewToy(name, image, likes=0) {
   }
 
   //add event listener to create a new toy button to call submitNewToy(name, imageUrl)
-document.querySelector(".submit").addEventListener("click", submitNewToy(name, image));
+document.querySelector(".submit").addEventListener("click", submitNewToy(name, image, likes= 0));
