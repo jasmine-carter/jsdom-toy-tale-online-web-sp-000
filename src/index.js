@@ -42,14 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
     card.appendChild(button)//add like button to card div
 
     toyCollection.appendChild(card)//adds new div to toycollection div
-    document.querySelectorAll(".like-btn").forEach(item => {
-      item.addEventListener("click", event => {
-        p.textContent = parseInt(p.textContent) + 1;
-        let likes = parseInt(p.textContent)
-        console.log(event.target.dataset)
-        updateLikeCount(likes, id);
-      })
-    })
   }//end of createToyCard function
 
   function retrieveToys() {//fetch toys
@@ -103,7 +95,15 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault()
     submitNewToy(name, image, likes=0)
   })
-
+  
+  document.querySelectorAll(".like-btn").forEach(item => {
+    item.addEventListener("click", event => {
+      p.textContent = parseInt(p.textContent) + 1;
+      let likes = parseInt(p.textContent)
+      console.log(event.target.dataset)
+      updateLikeCount(likes, id);
+    })
+  })
 
   //update like coutn by click to patch request to server
 function updateLikeCount(likes, id) {
