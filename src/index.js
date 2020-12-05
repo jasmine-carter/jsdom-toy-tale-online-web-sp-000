@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   }
 
-function submitNewToy(name, image) {
+function submitNewToy(name, image, likes=0) {
   return fetch("http://localhost:3000/toys", {
     method: "POST",
     headers: {
@@ -85,7 +85,7 @@ function submitNewToy(name, image) {
   })
     .then(function(object) {
       console.log(object);
-      createToyCard(name, image, object.likes)
+      createToyCard(name, image, likes)
     })
   }
 
