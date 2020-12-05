@@ -112,7 +112,7 @@ function addLike(id) {
 function updateLikeCount(likes, id) {
   console.log(`look at ${id} and ${likes}`)
   console.log()
-   fetch(`http://localhost:3000/toys/`${id}`, {
+   fetch(`http://localhost:3000/toys/${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
