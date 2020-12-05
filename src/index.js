@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const toyCollection = document.querySelector("#toy-collection")
 
   //create a functiont o create a toy info card
-  function createToyCard(name, image, likes) {
+  function createToyCard(name, image, likes, id) {
     let card = document.createElement("div");
     let h2 = document.createElement("H2");
     let img = document.createElement("IMG")
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".like-btn").forEach(item => {
       item.addEventListener("click", event => {
         p.textContent = parseInt(p.textContent) + 1;
-        updateLikeCount(p.textContent, );
+        updateLikeCount(p.textContent, id);
       })
     })
   }//end of createToyCard function
@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   //update like coutn by click to patch request to server
 function updateLikeCount(likes, id) {
-   fetch("http://localhost:3000/toys"/:id), {
+   fetch("http://localhost:3000/toys/`${id}"), {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
