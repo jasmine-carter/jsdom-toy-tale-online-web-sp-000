@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
     button.className = "like-btn"
     card.appendChild(h2) //assing h2 to card div
     card.appendChild(img) //add img to card div
-    card.appendChild(p)
-    card.appendChild(button)
+    card.appendChild(p) //add likes to card div
+    card.appendChild(button)//add like button to card div
 
     toyCollection.appendChild(card)//adds new div to toycollection div
   }
