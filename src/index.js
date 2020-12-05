@@ -88,3 +88,6 @@ function submitNewToy(name, imageUrl) {
       createToyCard(name, imageUrl, object.likes)
     })
   }
+
+  //add event listener to create a new toy button to call submitNewToy(name, imageUrl)
+document.querySelector("submit").addEventListener("click", submitNewToy(name, imageUrl));
