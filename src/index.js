@@ -94,3 +94,10 @@ document.addEventListener("DOMContentLoaded", () => {
     event.preventDefault()
     submitNewToy(name, image, likes=0)
   })
+
+  //add event listener to increase like count on click
+  document.querySelectorAll(".like-btn").forEach(item => {
+    item.addEventListener("click", event => {
+      likes.textContent = parseInt(likes.textContent) + 1;
+    })
+  })
