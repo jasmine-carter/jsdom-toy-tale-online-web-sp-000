@@ -29,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let img = document.createElement("IMG")
     let p = document.createElement("p")
     let button = document.createElement("button")
+    let id = id
     card.className = "card"
     img.className = "toy-avatar"
     img.src = image
