@@ -105,7 +105,7 @@ function addLike() {
   console.log(event.target.previousSibling.innerHTML)
   currentLikes = event.target.previousElementsSibling
   newLikeCount = parseInt(currentLikes) + 1;
-  let likes = parseInt(p.textContent)
+  let likes = newLikeCount
   updateLikeCount(likes, id);
 }
   //update like coutn by click to patch request to server
