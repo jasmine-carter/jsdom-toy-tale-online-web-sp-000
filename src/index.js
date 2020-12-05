@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return response.json();
     })
     .then(function(json) {
-      console.log(json)
+      //console.log(json)
       toys = json
       parseToys(toys)
     })
