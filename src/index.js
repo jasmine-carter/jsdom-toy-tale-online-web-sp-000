@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(function(json) {
       console.log(json)
       toys = json
-      //call parseToys(toys) //to iterate through each element in toys and create card
+      parseToys(toys)
     })
   }
 
