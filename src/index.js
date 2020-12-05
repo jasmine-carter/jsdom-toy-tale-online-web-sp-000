@@ -42,8 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
     card.appendChild(button)//add like button to card div
 
     toyCollection.appendChild(card)//adds new div to toycollection div
-
-    document.querySelector(".like-btn").addEventListener("click", event => {
+//make sure that only adding evetn listener for each click
+    button.addEventListener("click", event => {
       addLike()
       })
   }//end of createToyCard function
