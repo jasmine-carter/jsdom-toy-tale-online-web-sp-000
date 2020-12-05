@@ -103,16 +103,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   //update like coutn by click to patch request to server
-function updateLikeCount(likes) {
-   fetch("http://localhost:3000/toys")
+function updateLikeCount(likes, id) {
+   fetch("http://localhost:3000/toys"/:id), {
     method: "PATCH",
-    headers:
-    {
+    headers: {
       "Content-Type": "application/json",
       "Accept": "application/json"
-    }
+    },
     body: JSON.stringify({
       "likes": likes
     })
-  }
+  })
+  .then(function(response) {
+    return response.json()
+  })
+  .then(function(json)
+{
+  console.log(json)
+})
 }
