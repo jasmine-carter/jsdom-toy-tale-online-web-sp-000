@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const toyCollection = document.querySelector("#toy-collection")
 
   //create a functiont o create a toy info card
-  function createToyCard(name, src, likes) {
+  function createToyCard(name, image, likes) {
     let card = document.createElement("div");
     let h2 = document.createElement("H2");
     let img = document.createElement("IMG")
@@ -48,6 +48,18 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(function(json) {
       console.log(json)
+      toys = json
+      //call parseToys(toys) //to iterate through each element in toys and create card
     })
+  }
 
+  function parseToys(toys) {
+    const allToys = toys
+      for (const toy of allToys) {
+        console.log(toy)
+        name = toy.name;
+        likes = toy.likes;
+        image = toy.image;
+        createToyCard(name, image, likes)
+      }
   }
