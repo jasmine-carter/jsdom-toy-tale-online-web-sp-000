@@ -44,13 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toyCollection.appendChild(card)//adds new div to toycollection div
 //make sure that only adding evetn listener for each click
     button.addEventListener("click", event => {
-      function addLike() {
-        console.log(event.target)
-        p.textContent = parseInt(p.textContent) + 1;
-        let likes = parseInt(p.textContent)
-        console.log(event.target.dataset)
-        updateLikeCount(likes, id);
-      }
+      addLike()
       })
   }//end of createToyCard function
 
@@ -107,6 +101,13 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
 
+function addLike() {
+  console.log(event.target)
+  p.textContent = parseInt(p.textContent) + 1;
+  let likes = parseInt(p.textContent)
+  console.log(event.target.dataset)
+  updateLikeCount(likes, id);
+}
   //update like coutn by click to patch request to server
 function updateLikeCount(likes, id) {
   console.log(`look at ${id} and ${likes}`)
