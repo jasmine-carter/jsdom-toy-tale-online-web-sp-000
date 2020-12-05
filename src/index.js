@@ -88,4 +88,3 @@ function submitNewToy(name, imageUrl) {
       createToyCard(name, imageUrl, object.likes)
     })
   }
-
