@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".like-btn").forEach(item => {
       item.addEventListener("click", event => {
         p.textContent = parseInt(p.textContent) + 1;
+        updateLikeCount(p.textContent)
       })
     })
   }//end of createToyCard function
@@ -100,4 +101,16 @@ document.addEventListener("DOMContentLoaded", () => {
     submitNewToy(name, image, likes=0)
   })
 
-  //add event listener to increase like count on click
+
+  //update like coutn by click to patch request to server
+function updateLikeCount(likes) {
+  PATCH "http://localhost:3000/toys"
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    }
+    body: JSON.stringify({
+      "likes": likes
+    })
+  }
+}
