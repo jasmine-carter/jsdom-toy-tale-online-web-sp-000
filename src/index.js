@@ -75,15 +75,19 @@ function submitNewToy(name, imageUrl) {
       "Accept": "application/json"
     },
     body: JSON.stringify({
-      name,
-      imageUrl
+      "name": name,
+      "image": imageUrl,
+      "likes" : 0
     })
   })
   .then(function(response) {
-    return response.json()
+    return response.json();
   })
     .then(function(object) {
-      console.log(object)
+      console.log(object);
     })
-  })
-}
+  }
+
+  function createNewToy(name, image) {
+    
+  }
