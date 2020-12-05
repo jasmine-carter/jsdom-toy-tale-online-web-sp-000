@@ -111,7 +111,8 @@ function addLike(id) {
   //update like coutn by click to patch request to server
 function updateLikeCount(likes, id) {
   console.log(`look at ${id} and ${likes}`)
-   fetch("http://localhost:3000/toys/`${id}`", {
+  console.log()
+   fetch(`http://localhost:3000/toys/`${id}`, {
     method: "PATCH",
     headers: {
       "Content-Type": "application/json",
