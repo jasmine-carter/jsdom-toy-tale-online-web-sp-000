@@ -113,7 +113,7 @@ function updateLikeCount(event) {
       "Accept": "application/json"
     },
     body: JSON.stringify({
-      "likes": parseInt(event.target.textContent)
+      "likes": parseInt(event.target.innerText)
     })
   })
   .then(function(response) {
