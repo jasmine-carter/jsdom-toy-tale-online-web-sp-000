@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
 
-function addLike() {
+function addLike(id) {
   console.log(event.target.previousSibling.innerHTML)
   console.log(event)
 
