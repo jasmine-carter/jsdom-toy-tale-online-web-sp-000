@@ -103,10 +103,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function addLike() {
   console.log(event.target.previousSibling.innerHTML)
-  console.log(event.target.previousElementsSibling.innerText)
-  p.textContent = parseInt(p.textContent) + 1;
+  currentLikes = event.target.previousElementsSibling
+  newLikeCount = parseInt(currentLikes) + 1;
   let likes = parseInt(p.textContent)
-  console.log(event.target.dataset)
   updateLikeCount(likes, id);
 }
   //update like coutn by click to patch request to server
