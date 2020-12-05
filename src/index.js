@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });//end of click button to add new toy event listener
 
+  retrieveToys()
+  parseToys(toys)
+  createToyCard(name, image, likes)
 }); //end of domcontentloadedeventlistner
 
 
