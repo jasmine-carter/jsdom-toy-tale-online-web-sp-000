@@ -42,6 +42,11 @@ document.addEventListener("DOMContentLoaded", () => {
     card.appendChild(button)//add like button to card div
 
     toyCollection.appendChild(card)//adds new div to toycollection div
+    document.querySelectorAll(".like-btn").forEach(item => {
+      item.addEventListener("click", event => {
+        likes.textContent = parseInt(likes.textContent) + 1;
+      })
+    })
   }//end of createToyCard function
 
   function retrieveToys() {//fetch toys
@@ -96,8 +101,4 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   //add event listener to increase like count on click
-  document.querySelectorAll(".like-btn").forEach(item => {
-    item.addEventListener("click", event => {
-      likes.textContent = parseInt(likes.textContent) + 1;
-    })
-  })
+
