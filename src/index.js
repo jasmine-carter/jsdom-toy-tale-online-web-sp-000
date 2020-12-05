@@ -86,7 +86,6 @@ document.querySelector(".submit").addEventListener("click", function (event) {
       return response.json();
     })
       .then(function(object) {
-        console.log(object);
         createToyCard(name, image, likes)
       })
     }
