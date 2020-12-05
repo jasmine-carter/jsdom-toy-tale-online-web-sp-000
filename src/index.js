@@ -127,6 +127,6 @@ function updateLikeCount(likes, id) {
   })
   .then(function(json)
 {
-  console.log(json)
+  //console.log(json)
 })
 }
