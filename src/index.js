@@ -57,9 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const allToys = toys
       for (const toy of allToys) {
         console.log(toy)
-        name = toy.name;
-        likes = toy.likes;
-        image = toy.image;
+        let name = toy.name;
+        let likes = toy.likes;
+        let image = toy.image;
         createToyCard(name, image, likes)
       }
   }
