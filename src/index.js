@@ -106,7 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function updateLikeCount(likes) {
    fetch("http://localhost:3000/toys")
     method: "PATCH",
-    headers: {
+    headers:
+    {
       "Content-Type": "application/json",
       "Accept": "application/json"
     }
