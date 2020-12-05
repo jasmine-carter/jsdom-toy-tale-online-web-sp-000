@@ -40,12 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
     card.appendChild(img) //add img to card div
     card.appendChild(p) //add likes to card div
     card.appendChild(button)//add like button to card div
-    })
+
     toyCollection.appendChild(card)//adds new div to toycollection div
+
     document.querySelectorAll(".like-btn").forEach(item => {
       item.addEventListener("click", event => {
       addLike()
       })
+    })
   }//end of createToyCard function
 
   function retrieveToys() {//fetch toys
