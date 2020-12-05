@@ -66,3 +66,24 @@ document.addEventListener("DOMContentLoaded", () => {
         createToyCard(name, image, likes)
       }
   }
+
+function submitNewToy(name, imageUrl) {
+  return fetch("http://localhost:3000/toys", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify({
+      name,
+      imageUrl
+    })
+  })
+  .then(function(response) {
+    return response.json()
+  })
+    .then(function(object) {
+      console.log(object)
+    })
+  })
+}
