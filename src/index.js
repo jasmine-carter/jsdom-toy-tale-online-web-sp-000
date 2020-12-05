@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function parseToys(toys) {
     const allToys = toys
       for (const toy of allToys) {
-        console.log(toy)
+      //  console.log(toy)
         let name = toy.name;
         let likes = toy.likes;
         let image = toy.image;
