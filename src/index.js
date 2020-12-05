@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".like-btn").forEach(item => {
       item.addEventListener("click", event => {
         p.textContent = parseInt(p.textContent) + 1;
-        updateLikeCount(p.textContent)
+        updateLikeCount(p.textContent);
       })
     })
   }//end of createToyCard function
