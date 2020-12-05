@@ -49,5 +49,5 @@ document.addEventListener("DOMContentLoaded", () => {
     .then(function(json) {
       console.log(json)
     })
-    
+
   }
