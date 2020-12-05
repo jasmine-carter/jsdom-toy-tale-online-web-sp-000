@@ -45,8 +45,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelectorAll(".like-btn").forEach(item => {
       item.addEventListener("click", event => {
         p.textContent = parseInt(p.textContent) + 1;
+        let likes = parseInt(p.textContent)
         console.log(event.target.dataset)
-        updateLikeCount(p.textContent, id);
+        updateLikeCount(likes, id);
       })
     })
   }//end of createToyCard function
@@ -115,7 +116,7 @@ function updateLikeCount(event) {
       "Accept": "application/json"
     },
     body: JSON.stringify({
-      "likes": parseInt(event.target.innerText)
+      "likes": likes
     })
   })
   .then(function(response) {
