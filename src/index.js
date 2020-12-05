@@ -85,9 +85,7 @@ function submitNewToy(name, imageUrl) {
   })
     .then(function(object) {
       console.log(object);
+      createToyCard(name, imageUrl, object.likes)
     })
   }
 
-  function createNewToy(name, image) {
-
-  }
