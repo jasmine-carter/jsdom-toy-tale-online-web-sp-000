@@ -46,7 +46,6 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector(".like-btn").addEventListener("click", event => {
       addLike()
       })
-    })
   }//end of createToyCard function
 
   function retrieveToys() {//fetch toys
