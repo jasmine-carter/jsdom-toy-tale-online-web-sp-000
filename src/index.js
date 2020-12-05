@@ -101,4 +101,3 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
   //add event listener to increase like count on click
-
