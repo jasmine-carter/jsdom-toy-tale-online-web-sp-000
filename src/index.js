@@ -20,12 +20,15 @@ document.addEventListener("DOMContentLoaded", () => {
     let card = document.createElement("div");
     let h2 = document.createElement("H2");
     let img = document.createElement("IMG")
+    let p = document.createElement("p")
     card.className = "card"
     img.className = "toy-avatar"
     img.src = src
     h2.textContent = name //assign h2 value of name
+    p.className = "likes"
+    p.textContent = likes
     card.appendChild(h2) //assing h2 to card div
-    card.appendChild(img)
+    card.appendChild(img) //add img to card div
 
 
     toyCollection.appendChild(card)//adds new div to toycollection div
