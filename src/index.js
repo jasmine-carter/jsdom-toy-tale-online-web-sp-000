@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toyCollection.appendChild(card)//adds new div to toycollection div
 //make sure that only adding evetn listener for each click
     button.addEventListener("click", event => {
-      addLike()
+      addLike(id)
       })
   }//end of createToyCard function
 
@@ -104,6 +104,8 @@ document.addEventListener("DOMContentLoaded", () => {
 function addLike() {
   console.log(event.target.previousSibling.innerHTML)
   console.log(event)
+
+  //figure out
   currentLikes = event.target.previousElementsSibling
   newLikeCount = parseInt(currentLikes) + 1;
   let likes = newLikeCount
