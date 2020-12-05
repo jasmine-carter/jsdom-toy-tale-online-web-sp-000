@@ -11,5 +11,24 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       toyFormContainer.style.display = "none";
     }
-  });
-});
+  });//end of click button to add new toy event listener
+
+  const toyCollection = document.querySelector("#toy-collection")
+
+  //create a functiont o create a toy info card
+  function createToyCard(name, src, likes) {
+    let card = document.createElement("div");
+    let h2 = document.createElement("H2");
+    let img = document.createElement("IMG")
+    card.className = "card"
+    img.className = "toy-avatar"
+    img.src = src
+    h2.textContent = name //assign h2 value of name
+    card.appendChild(h2) //assing h2 to card div
+    card.appendChild(img)
+
+
+    toyCollection.appendChild(card)//adds new div to toycollection div
+  }
+
+}); //end of domcontentloadedeventlistner
