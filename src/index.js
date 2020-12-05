@@ -67,26 +67,27 @@ document.addEventListener("DOMContentLoaded", () => {
       }
   }
 
+  function submitNewToy(name, image, likes=0) {
+    return fetch("http://localhost:3000/toys", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      body: JSON.stringify({
+        "name": name,
+        "image": image,
+        "likes" : 0
+      })
+    })
+    .then(function(response) {
+      return response.json();
+    })
+      .then(function(object) {
+        createToyCard(name, image, likes)
+      })
+    }
   //add event listener to create a new toy button to call submitNewToy(name, imageUrl)
   document.querySelector(".submit").addEventListener("click", function (event) {
-    function submitNewToy(name, image, likes=0) {
-      return fetch("http://localhost:3000/toys", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json"
-        },
-        body: JSON.stringify({
-          "name": name,
-          "image": image,
-          "likes" : 0
-        })
-      })
-      .then(function(response) {
-        return response.json();
-      })
-        .then(function(object) {
-          createToyCard(name, image, likes)
-        })
-      }
+    submitNewToy(name, image, like=0)
   })
