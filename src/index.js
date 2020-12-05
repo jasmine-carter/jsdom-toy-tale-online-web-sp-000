@@ -89,5 +89,5 @@ function submitNewToy(name, imageUrl) {
   }
 
   function createNewToy(name, image) {
-    
+
   }
