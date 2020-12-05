@@ -89,6 +89,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   //add event listener to create a new toy button to call submitNewToy(name, imageUrl)
   document.querySelector(".submit").addEventListener("click", function (event) {
+    let name = document.querySelector("input[name='image']").value
+    let image = document.querySelector("input[name='image']").value
     event.preventDefault()
-    submitNewToy(event.target)
+    submitNewToy(name, image, likes=0)
   })
