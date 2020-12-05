@@ -105,7 +105,7 @@ function addLike(id) {
   //figure out
   console.log(event.target.previousSibling)
   console.log(event.target.previousSibling)
-  currentLikes = event.target.previousElementsSibling
+  currentLikes = event.target.previousSibling
   newLikeCount = parseInt(currentLikes) + 1;
   let likes = parseInt(newLikeCount)
   updateLikeCount(likes, id);
